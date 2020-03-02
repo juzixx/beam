@@ -38,6 +38,7 @@ job('beam_Prober_CommunityMetrics') {
     gradle {
       rootBuildScriptDir(commonJobProperties.checkoutDir)
       tasks(':communityMetricsProber')
+      switches('--rebuild-tasks')
       commonJobProperties.setGradleSwitches(delegate)
     }
   }
